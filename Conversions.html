@@ -1,0 +1,184 @@
+<!doctype html> 
+
+<html>
+
+<head>
+  <title>
+    Conversions
+  </title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href = "Main.css" type = "text/css">
+  <script src="Main.js"></script>
+</head>
+
+<body>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Menu</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="./index.html">Home</a>
+          <a href="./About Me.html">About Me</a>
+          <a href="./Save-for-later.html">Saved Items</a>
+        </div>
+      </div>
+    </br>
+<button id="hide">Hide All Images</button>
+<button id="show">Show All Images</button>
+<h1>Converting Swimming Times</h1>
+
+<p><a href="./index.html">Go Back To Index</a></p>
+
+    <div id="swimCourse">
+        <h2>What is a swim course?</h2>
+        <p>
+            Simply put, “swim course” is just a fancy name for a standard pool length. 
+            In the US, there are three commonly encountered lengths, or courses, for competition pools. They are:
+            <ul>
+                <li>25 yards — also known as “short course yards” or simply “yards”. This pool length is frequently used for year-round, 
+                    high school and collegiate competitions, and is also often used for neighborhood and country club pools. 
+                    This course is abbreviated as “SCY” or just “Y”.</li>
+                <li>
+                    25 meters — also known as “short course meters” or simply “short course” or “meters”. This pool length is generally 
+                    used for international competition and is also used for some neighborhood and country club pools. 
+                    This course is abbreviated as “SCM” or just “S”.
+                </li>
+                <li>
+                    50 meters — known as “long course meters” or simply “long course”. This is the pool length used for the Olympics 
+                    and many international competitions, and during the “long course season” of USA Swimming from April to August. 
+                    This much larger pool size is rarely used for neighborhood or club pools. This course is abbreviated as “LCM” or just “L”.
+                </li>
+            </ul>
+        </p>
+        <p>
+            The diagram below shows the relative lengths of each of the standard courses:
+            <img src="https://www.swimtopia.com/wp-content/uploads/2019/12/Microsoft-Word-Document1-1024x252.jpg">
+        </p>
+        <p>
+            The key thing to remember about swim courses is that they describe different distances. A 25-yard pool is equivalent to 22.86 meters, 
+            or a bit more than 90% the length of a 25-meter pool. And, of course, a 50-meter pool is twice the length of a 25-meter pool.
+        </p>
+    
+            <h3 id="sideNoteHead">Side note: accounting for imprecise pool lengths</h3>
+            <p id="sideNote">
+            It is not uncommon for recreational pools to not be built to exacting standards. 
+            When measured precisely, many neighborhood pools will be a little longer or a little shorter than their specified course. 
+            In some cases, such as 20-yard or 33 ⅓ yard pools, the difference can be very significant. To account for these variations, 
+            sometimes a pool-specific “course correction factor” is calculated and applied to all results recorded in that pool. 
+            This course correction is similar to, but different from, the time conversion used to estimate times between standard pool courses. 
+            These course correction factors, if used, are calculated and tracked separately for each pool.
+        </p>
+            <!-- Save for later button -->
+        <button class="saveforLater">
+            Save for later
+        </button>
+    </div>
+    
+    <div id="conversion">
+        <h2>What is time conversion?</h2>
+        <p>
+            The vast majority of Summer league swim meets are held in either a 25-yard or 25-meter pool. It is common in Summer league 
+            swimming to swim in a “yards” pool one week, and then in a “meters” pool the next. With some times recorded in “yards” pools and 
+            others from “meters” pools, they can’t be compared and used as-is for meet seeding and other purposes. This is where time conversion comes in: 
+            it allows times recorded in pools of different lengths (aka courses) to be used interchangeably for seeding, meet qualification, and other purposes.
+        </p>
+        <p>
+            The most important thing to remember is: all time conversions are estimates, not exact calculations. Unlike conversion from one distance to another, 
+            which is precise, a time conversion estimates the time it would take a swimmer to swim a specific distance based on that swimmer’s previous time swimming 
+            the same stroke over a different distance. 
+        </p>
+        <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple114/v4/4a/5b/6d/4a5b6d5a-9387-afd4-7673-1af692487342/pr_source.png/750x750bb.jpeg">
+        <!-- Save for later button -->
+        <button class="saveforLater">
+            Save for later
+        </button>
+    </div>
+    
+   <div id="yardToMeter">
+    <h2>Converting Swim Times From Yards to Meters</h2>
+    <p> Let’s illustrate with an example. If Susie swam a 50-yard breastroke in a 25-yard pool in 34.45 seconds, 
+        approximately how fast would Susie swim a 50-meter breaststroke in a 25-meter pool?
+    </p>
+    <p>
+        One yard is equivalent to 1.0936 meters, thus 50 yards is exactly equivalent to 45.72 meters.
+    </p>
+    <p>
+        If we simply multiply Susie’s 34.45 time by the distance conversion factor (1.0936), we would get an estimate of 37.67 seconds. Converting this way is not 
+        very accurate, however, because it just converts the distance—it doesn’t take into account the fact that Susie would be swimming a longer distance, 
+        and that is likely to affect her overall pace. 
+    </p>
+    <p>
+        As the distance increases, it’s a safe bet Susie’s pace will gradually get slower. In the same way we wouldn’t expect Susie to hold her 25 sprint pace for a 200, 
+        we should expect the difference in distance in this example (4.28 meters) to have some small but measurable impact on Susie’s overall pace. 
+        That impact should be reflected in the converted time estimate.
+    </p>
+    <p>
+        To precisely estimate how this extra distance would affect Susie’s converted time, we’d need to know more about Susie. Some swimmers are sprinters, 
+        and others excel at distance events. Depending on athletic ability, age and other factors, the impact of a change in distance will have on an athlete’s time can 
+        vary significantly from swimmer to swimmer. Taking into account all those factors would add a lot of complexity.
+    </p>
+    <p>
+        In practice, for the sake of simplicity, a standard conversion factor of 1.11 has traditionally been used by most swim software, including SwimTopia, 
+        when converting 25-yard times to 25-meter times (and vice versa). This conversion factor includes the distance conversion (1.0936) 
+        plus a little extra (0.0164) to account for the impact of the extra distance on the overall pace. The difference in distance between 25-meters and 
+        25-yards is close enough that applying more complex conversion techniques would not yield significantly better estimates—or at least not enough to 
+        justify the additional complexity.
+    </p>
+    <P>
+        Using this standard “simple” conversion factor, Susie’s 34.45Y (short course yards) time would convert a 38.24S (short course meters) time. 
+        In this example, the course abbreviation is appended to the time to let you know what course the time was recorded in.
+    </P>
+    <p>
+        Keep in mind this converted 38.24S time is just an estimate. Depending on the swimmer and conditions of the swim, 
+        the converted estimate might be spot on or way off compared to an actual timed swim in the target course. In general, most of the time, 
+        it will be pretty close, and that makes it a useful, simple approximation.
+    </p>
+    
+        <h3 id="sideNoteHead">Side note: rounding converted times</h3>
+        <p id="sideNote">
+        When converting swim times between courses, one will often end up with extra digits that need to be rounded to hundredths of seconds. 
+        Rather than using simple rounding rules, most swim software, including SwimTopia, use a more complex rounding technique known as 
+        “statistician’s rounding” or “banker’s rounding.” This approach reduces bias by only rounding up from 0.5 when the previous digit is odd. 
+        Thus a time of 23.435 would round up to 23.44 and a time of 23.445 would round down to the same 23.44.
+    </p>
+    <!-- Save for later button -->
+    <button class="saveforLater">
+        Save for later
+    </button>
+   </div>
+
+    <div id="complexConversions">
+        <h2>More Complex Time Conversions</h2>   
+        <p>
+            While converting short course yards (25yd) to short course meters (25m) is relatively simple, converting between short course (25m) and 
+            long course meters (50m) adds an extra twist: estimating the impact of the turn (or lack thereof) on the time.
+        </p>
+        <p>
+            Things get even more interesting when converting times for longer distance events. For example, converting a 1,650-yard time to a 1,500-meter time. 
+            In this case, the number of turns and the distance will be quite different. 
+        </p>
+        <p>
+            There are many different approaches to converting swim times. 
+            This is why you’ll often get different results when converting times using the various 
+            <a href="https://swimswam.com/swimming-times-conversion-tool/">swim time conversion tools</a> you can find on the web. 
+        </p>
+        <p>
+            A common simple conversion calls for adding 2% when converting from short course to long course to account for fewer turns. However, 
+            the differences in turning speed for different strokes and athletes are significant enough that more complex conversion methods are usually warranted.
+        </p>
+        <p>
+            The more accurate conversion methods rely on statistical analysis of large samples of swim times to calculate tables of conversion factors for every 
+            combination of age, gender, stroke and distance. All of those factors (age, gender, stroke and distance) will be taken into account when estimating 
+            a converted time using this method.
+        </p>
+        <p>
+            While some approaches may be more accurate than others, no conversion method is perfect or absolutely correct. At the end of the day, 
+            all conversions are still just estimates. Two swimmers of the same age and gender swimming the same stroke and distance will 
+            each have different strengths and weaknesses that cannot be distilled to a single formula. The only way to really know how fast a swimmer 
+            is going to swim, is for that swimmer to prove it in the pool.
+        </p>
+            <!-- Save for later button -->
+        <button class="saveforLater">
+            Save for later
+        </button>
+    </div>
+
+</body>
